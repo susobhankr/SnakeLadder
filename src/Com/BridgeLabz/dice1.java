@@ -8,15 +8,18 @@ public class dice1 {
 		static final int Snake = 2;
 		static final int ladder = 1;
 		static final int Noplay = 0;
+		static int DICE = 0;
 
 		public static void main(String[] args) 
 		{
 			int position = 0;
+			System.out.println("position:"+position);
 			while (position < 100) 
 			{
 			Random ran = new Random();
 			int dice = ran.nextInt(6)+1;
-			System.out.println("Dice: "+dice);
+			System.out.println("dice: "+dice);
+			++DICE;
 			
 			int optionCheck = ran.nextInt(3);
 			System.out.println("OptionCheck: "+optionCheck);
@@ -37,7 +40,7 @@ public class dice1 {
 			}
 			if (position<0)
 				position=0;
-			System.out.println("Position: "+position);
+			System.out.println("Position: "+position+"\ndicecount"+DICE);
 			}
 		}
 }
